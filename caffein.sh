@@ -28,7 +28,8 @@ CAFFE_ROOT=/opt/caffe
 # https://github.com/docker/hub-feedback/issues/460
 CLONE_TAG=1.0
 
-git clone -b ${CLONE_TAG} --depth 1 https://github.com/BVLC/caffe.git .
+git clone -b ${CLONE_TAG} --depth 1 https://github.com/BVLC/caffe.git 
+cd ./caffe
 pip install --upgrade pip 
 cd python 
 for req in $(cat requirements.txt) pydot; do pip install $req; done 
